@@ -1,5 +1,6 @@
-Welcome to the Bundled References Documentation!
-================================================
+================================
+Bundled References Documentation
+================================
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
@@ -13,12 +14,32 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
-Contents
+Research
 --------
 
 .. toctree::
   :caption: Research
+  :hidden:
 
   research/papers
+  research/graphdbs
+  research/graphbenchmarks
+
+:doc:`research/papers`
+  Research papers that contain relevant information to Bundled References.
+
+:doc:`research/graphdbs`
+  Overview of current graph databases and how they are structured.
+
+:doc:`research/graphbenchmarks`
+  Analysis of graph benchmarks that can be used to benchmark graph database performance.
+
+Bundled References
+------------------
+
+.. toctree::
+  :caption: Bundled References
+  :hidden:
+
   usage
   api
