@@ -1,4 +1,4 @@
-Welcome to the Bundled References documentation!
+Welcome to the Bundled References Documentation!
 ================================================
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
@@ -17,6 +17,8 @@ Contents
 --------
 
 .. toctree::
+  :caption: Research
 
-   usage
-   api
+  research/papers
+  usage
+  api
