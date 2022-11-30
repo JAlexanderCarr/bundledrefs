@@ -41,5 +41,5 @@ Bundled References
   :caption: Bundled References
   :hidden:
 
-  usage
-  api
+  bundledrefs/usage
+  bundledrefs/api
