@@ -128,3 +128,48 @@ memory and lock-free techniques, respectively. Our algorithms are
 applicable to more data structures than previous work, and are
 shown to be highly efficient on a large scale Intel system.
 
+Constant-Time Snapshots with Applications to Concurrent Data Structures
+=======================================================================
+
+Another competing linked data structure optimized for range queries is
+versioned CAS (vCAS), which is described in this paper.  This implements
+a unique way of subsituting new verions of linked nodes during a compare
+and swap operation.  I reviewed this paper to analyze the performance of
+vCAS in relation to Bundled References.  `Constant-Time Snapshots with
+Applications to Concurrent Data Structures`_ was authored by Yuanhao Wei,
+Naama Ben-David, Guy E. Blelloch, Panagiota Fatourou, Eric Ruppert, and
+Yihan Sun.
+
+.. _Constant-Time Snapshots with Applications to Concurrent Data Structures: https://dl.acm.org/doi/pdf/10.1145/3437801.3441602
+
+Abstract
+--------
+
+Given a concurrent data structure, we present an approach
+for efficiently taking snapshots of its constituent CAS objects.
+More specifically, we support a constant-time operation that
+returns a snapshot handle. This snapshot handle can later be
+used to read the value of any base object at the time the snap-
+shot was taken. Reading an earlier version of a base object
+is wait-free and takes time proportional to the number of
+successful writes to the object since the snapshot was taken.
+Importantly, our approach preserves all the time bounds and
+parallelism of the original data structure.
+
+Our fast, flexible snapshots yield simple, efficient imple-
+mentations of atomic multi-point queries on a large class
+of concurrent data structures. For example, in a search tree
+where child pointers are updated using CAS, once a snapshot
+is taken, one can atomically search for ranges of keys, find
+the first key that matches some criteria, or check if a collec-
+tion of keys are all present, simply by running a standard
+sequential algorithm on a snapshot of the tree.
+
+To evaluate the performance of our approach, we apply it
+to three search trees, one balanced and two not. Experiments
+show that the overhead of supporting snapshots is low across
+a variety of workloads. Moreover, in almost all cases, range
+queries on the trees built from our snapshots perform as well
+as or better than state-of-the-art concurrent data structures
+that support atomic range queries.
+
