@@ -5,8 +5,8 @@ Graph Benchmarks
 Benchmarking Graph Databases
 ============================
 
-In order to understand the benefits of implementing Bundled References to
-a graph database, benchmarking performance will be required.  However, there
+In order to understand the benefits of implementing Bundled References in
+a graph database, measuring performance will be required.  However, there
 are many graph database benchmark options available, and they are not created equal.
 Each benchmark tests different algorithms and is compatible with a 
 specific set of graph databases.  To best evaluate the effect Bundled
@@ -22,7 +22,7 @@ and the databases they are compatible with.  After discovering over 10 possible
 graph database benchmarks, I narrowed it down to the two most comprehensive
 options, the `Linked Data Benchmark Council (LDBC)`_ and `Graph Benchmark`_.
 
-.. _Linked Data Benchmark Council (LDBC): https://ldbcouncil.org/introduction/
+.. _Linked Data Benchmark Council (LDBC): https://ldbcouncil.org/
 .. _Graph Benchmark: https://graphbenchmark.com/
 
 Linked Data Benchmark Council
@@ -48,8 +48,22 @@ adapted graph database with Bundled References.
 
 .. _Social Network Benchmark (SNB): https://ldbcouncil.org/benchmarks/snb/
 
-GraphBenchmark
---------------
+Graph Benchmark
+---------------
 
+Graph Benchmark was developed by Matteo Lissandrini, Martin Brugnara, and Yannis
+Velegrakis.  This benchmark is highly customizable and provides functionality for
+a wide range of queries and graph databases.  Just in the example test cases, over
+70 different individual and bulk queries are highlighted.  In addition, these tests
+also incorporate many different graph databases, including:
 
+* Neo4j
+* OrientDB
+* Titan
+* ArangoDB
+
+Another major benefit of Graph Benchmark is the wide variety of data sets it supports
+as well.  In fact, Graph Benchmark supports some data sets created by LDBC, like the
+SNB data.  Therefore, due to Graph Benchmark's flexibility, it is the best choice to
+benchmark a graph database implementation with Bundled References.
 
