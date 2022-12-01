@@ -9,7 +9,7 @@ The Bundled References implementation described in this paper
 serve as the inspiration for applying Bundled References to a
 graph database.  The goal of my project is to take this
 implementation of Bundled References and add additional update
-functionality.  Then, using a an augmented Bundled References
+functionality.  Then, using an augmented Bundled References
 data structure, adapt a graph database that uses linked data
 structures to use Bundled References instead.  The goal is for
 this adaptation to increase the performance of range queries
@@ -34,4 +34,37 @@ upon the state-of-the-art techniques by 1.2x-1.8x for a skip
 list and 1.3x-3.7x for a binary search tree. We also integrate
 our bundled data structure into the DBx1000 in-memory
 database, yielding up to 40% gain over the same competitors.
+
+Black-box Concurrent Data Structures for NUMA Architectures
+===========================================================
+
+Besides applying Bundled References to graph database storages, there
+are other ways of achieving higher performance.  One of those ways is
+through taking advantage of NUMA architectures.  The goal of this paper
+was to create a better understanding of how data structures could be
+adapted to take full advantage of NUMA machines.  `Black-box Concurrent
+Data Structures for NUMA Architectures`_ was authored by Irina Calciu,
+Siddhartha Sen, Mahesh Balakrishnan, and Marcos K. Aguilera.
+
+.. _Black-box Concurrent Data Structures for NUMA Architectures: https://dl.acm.org/doi/pdf/10.1145/3093336.3037721
+
+Abstract
+--------
+
+High-performance servers are Non-Uniform Memory Access (NUMA) machines.
+To fully leverage these machines, programmers need efficient concurrent
+data structures that are aware of the NUMA performance artifacts. We
+propose Node Replication (NR), a black-box approach to obtaining such
+data structures. NR takes an arbitrary sequential data structure and
+automatically transforms it into a NUMA-aware concurrent data structure
+satisfying linearizability. Using NR requires no expertise in concurrent
+data structure design, and the result is free of concurrency bugs. NR
+draws ideas from two disciplines: shared-memory algorithms and distributed
+systems. Briefly, NR implements a NUMA-aware shared log, and then uses the
+log to replicate data structures consistently across NUMA nodes. NR is best
+suited for contended data structures, where it can outperform lock-free
+algorithms by 3.1x, and lock-based solutions by 30x. To show the benefits
+of NR to a real application, we apply NR to the data structures of Redis,
+an in-memory storage system. The result outperforms other methods by up to
+14x. The cost of NR is additional memory for its log and replicas.
 
