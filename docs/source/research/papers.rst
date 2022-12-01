@@ -173,3 +173,38 @@ queries on the trees built from our snapshots perform as well
 as or better than state-of-the-art concurrent data structures
 that support atomic range queries.
 
+G-Tran: A High Performance Distributed Graph Database with a Decentralized Architecture
+=======================================================================================
+
+G-Tran is a graph database implementation that uses a Multi-Version Optimistic
+Concurrency Control (MV-OCC) mechanism to address large read or write sets, very similar
+to a range query.  This MV-OCC system acts very similarly to Bundled References,
+just implemented in a different way.  Reviewing this paper provided a deep dive into
+a graph database that is adapted for increased performance on range queries, which
+is the goal of using Bundled References in a graph database implementation.  `G-Tran:
+A High Performance Distributed Graph Database with a Decentralized Architecture
+<https://www.vldb.org/pvldb/vol15/p2545-chen.pdf>`_ was authored by Hongzhi Chen,
+Changji Li, Chenguang Zheng, Chenghuan Huang, Juncheng Fang, James Cheng, and Jian
+Zhang.
+
+Abstract
+--------
+
+Graph transaction processing poses unique challenges such as ran-
+dom data access due to the irregularity of graph structures, low
+throughput and high abort rate due to the relatively large read/write
+sets in graph transactions. To address these challenges, we present
+G-Tran, a remote direct memory access (RDMA)-enabled distributed
+in-memory graph database with serializable and snapshot isolation
+support. First, we propose a graph-native data store to achieve
+good data locality and fast data access for transactional updates
+and queries. Second, G-Tran adopts a fully decentralized architec-
+ture that leverages RDMA to process distributed transactions with
+the massively parallel processing (MPP) model, which can achieve
+high performance by utilizing all computing resources. In addition,
+we propose a new multi-version optimistic concurrency control
+(MV-OCC) protocol with two optimizations to address the issue of
+large read/write sets in graph transactions. Extensive experiments
+show that G-Tran achieves competitive performance compared
+with other popular graph databases on benchmark workloads.
+
