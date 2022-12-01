@@ -94,3 +94,37 @@ performance implementations. We tested NUMASK on a four-socket server. Its perfo
 scales for both read-intensive and write-intensive workloads (tested up to 160 threads). In write-
 intensive workload, NUMASK shows speedups over competitors in the range of 2x to 16x.
 
+Harnessing Epoch-based Reclamation for Efficient Range Queries
+==============================================================
+
+Bundled References uses an epoch based global timestamp to order
+references, which greatly speeds up range queries.  A competing
+linked data structure described in this paper also utilizes an
+epoch based global timestamp to speed up range queries as well.
+I reviewed this paper in order to get a better understanding of
+how this implementation differs from Bundled References, and
+consider if there are any graph database applications for this
+linked data structure.  `Harnessing Epoch-based Reclamation for
+Efficient Range Queries`_ was authored by Maya Arbel-Raviv and
+Trevor Brown.
+
+.. _Harnessing Epoch-based Reclamation for Efficient Range Queries: https://dl.acm.org/doi/pdf/10.1145/3200691.3178489
+
+Abstract
+--------
+
+Concurrent sets with range query operations are highly desirable
+in applications such as in-memory databases. However, few set
+implementations offer range queries. Known techniques for augmenting
+data structures with range queries (or operations that can be used
+to build range queries) have numerous problems that limit their
+usefulness. For example, they impose high overhead or rely heavily
+on garbage collection. In this work, we show how to augment data
+structures with highly efficient range queries, without relying
+on garbage collection. We identify a property of epoch-based memory
+reclamation algorithms that makes them ideal for implementing range
+queries, and produce three algorithms, which use locks, transactional
+memory and lock-free techniques, respectively. Our algorithms are
+applicable to more data structures than previous work, and are
+shown to be highly efficient on a large scale Intel system.
+
