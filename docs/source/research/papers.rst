@@ -77,8 +77,8 @@ that used NUMA to speed up implementation of a skip list, which is a linked
 data structure that could also be adapted for Bundled References.  Therefore,
 my goal was to consider the benefits of using Bundled References and NUMA aware
 linked data structures in graph databases.  `NUMASK: High Performance Scalable
-Skip List for NUMA`_ was authored by Henry Daly, Ahmed Hassan, Michael F. Spear,
-and Roberto Palmieri.
+Skip List for NUMA <https://drops.dagstuhl.de/opus/volltexte/2018/9807/pdf/LIPIcs-DISC-2018-18.pdf>`_
+was authored by Henry Daly, Ahmed Hassan, Michael F. Spear, and Roberto Palmieri.
 
 Abstract
 --------
