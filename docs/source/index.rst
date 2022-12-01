@@ -45,3 +45,6 @@ Bundled References
   :hidden:
 
   bundledrefs/getting_started
+
+:doc:`bundledrefs/getting_started`
+  How to get started with running the benchmark for Bundled References.
