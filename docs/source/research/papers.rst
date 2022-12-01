@@ -38,11 +38,12 @@ database, yielding up to 40% gain over the same competitors.
 Black-box Concurrent Data Structures for NUMA Architectures
 ===========================================================
 
-Besides applying Bundled References to graph database storages, there
+Besides applying Bundled References to graph databases, there
 are other ways of achieving higher performance.  One of those ways is
-through taking advantage of NUMA architectures.  The goal of this paper
-was to create a better understanding of how data structures could be
-adapted to take full advantage of NUMA machines.  `Black-box Concurrent
+through taking advantage of NUMA architectures.  The reason for
+reviewing this paper was to create a better understanding
+of how data structures could be adapted to take full
+advantage of NUMA machines.  `Black-box Concurrent
 Data Structures for NUMA Architectures`_ was authored by Irina Calciu,
 Siddhartha Sen, Mahesh Balakrishnan, and Marcos K. Aguilera.
 
@@ -67,4 +68,29 @@ algorithms by 3.1x, and lock-based solutions by 30x. To show the benefits
 of NR to a real application, we apply NR to the data structures of Redis,
 an in-memory storage system. The result outperforms other methods by up to
 14x. The cost of NR is additional memory for its log and replicas.
+
+NUMASK: High Performance Scalable Skip List for NUMA
+====================================================
+
+To dive a bit deeper on NUMA performance improvements, I reviewed a paper
+that used NUMA to speed up implementation of a skip list, which is a linked
+data structure that could also be adapted for Bundled References.  Therefore,
+my goal was to consider the benefits of using Bundled References and NUMA aware
+linked data structures in graph databases.  `NUMASK: High Performance Scalable
+Skip List for NUMA`_ was authored by Henry Daly, Ahmed Hassan, Michael F. Spear,
+and Roberto Palmieri.
+
+Abstract
+--------
+
+This paper presents NUMASK, a skip list data structure specifically designed to exploit the
+characteristics of Non-Uniform Memory Access (NUMA) architectures to improve performance.
+NUMASK deploys an architecture around a concurrent skip list so that all metadata accesses
+(e.g., traversals of the skip list index levels) read and write memory blocks allocated in the NUMA
+zone where the thread is executing. To the best of our knowledge, NUMASK is the first NUMA-
+aware skip list design that goes beyond merely limiting the performance penalties introduced by
+NUMA, and leverages the NUMA architecture to outperform state-of-the-art concurrent high-
+performance implementations. We tested NUMASK on a four-socket server. Its performance
+scales for both read-intensive and write-intensive workloads (tested up to 160 threads). In write-
+intensive workload, NUMASK shows speedups over competitors in the range of 2x to 16x.
 
