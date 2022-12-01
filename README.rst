@@ -1,9 +1,13 @@
-Template for the Read the Docs tutorial
-=======================================
+Bundled References
+==================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Bundled References is a project for an independent research study
+being conducted by Alexander Carr under Professor Ahmed Hassan
+at Lehigh University.  The goal of this independent research study is to take the Bundled References
+linked data structure and adapt it to be used in a graph database.  Range queries
+across nodes within a graph database are common in graph query workloads, which
+creates an opportunity to increase graph database performance with Bundled References.
 
-Read the tutorial here:
+The wiki and documentation can be found here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://bundledrefs.readthedocs.io/en/latest/
