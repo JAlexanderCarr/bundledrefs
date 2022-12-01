@@ -44,5 +44,4 @@ Bundled References
   :caption: Bundled References
   :hidden:
 
-  bundledrefs/usage
-  bundledrefs/api
+  bundledrefs/getting_started
