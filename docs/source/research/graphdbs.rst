@@ -22,7 +22,7 @@ Popular Graph Databases
 
 asd
 
-.. image:: /images/graphdb_market_share.png
+.. image:: ../images/graphdb_market_share.png
 
 Amazon Neptune
 --------------
