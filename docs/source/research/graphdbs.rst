@@ -14,8 +14,8 @@ and representing graph databases, the property graph model and resource descript
 two methods are both very popular among industry leading graph database technologies, proving they both can
 be viable when used to represent graph data structures.
 
-Property Graph
---------------
+Property Graph Model
+--------------------
 
 Property graphs model graphs as a set of nodes and relationships, where either nodes or relationships can have
 additional attributes, called properties.  This way of representing a set of vertices and edges is straightforward,
@@ -25,8 +25,8 @@ pointers to each other.
 
 .. image:: /images/property_graph.png
 
-Resource Description Framework
-------------------------------
+Resource Description Framework Model
+------------------------------------
 
 The RDF model is a bit more difficult to grasp than the property graph model.  RDF is a method of
 representing highly interconnected data.  Therefore, it can easily be applied to graph databases.  In the
@@ -44,14 +44,17 @@ The market for graph databases is large, and there exist many different companie
 projects that have developed different graph database products.  In order for my adaptation of a
 graph database with Bundled References to be relevant, it must adapt an already common graph
 database product.  To find the currently most used graph databases, I consulted a `market research
-report conducted by Forrester Research`_.  This report indicated that Neo4j and Amazon Web Services
-(Amazon Neptune) are the industry leaders, which is unique in the fact that they are polar opposites.
+report conducted by Forrester Research`_.  This report indicated that `Neo4j`_ and `Amazon Web Services
+(Amazon Neptune)`_ are the industry leaders, which is unique in the fact that they are polar opposites.
 Neo4j is an open source project utilizing a property graph model, whereas Amazon Neptune is a
 proprietary graph database implemented using the RDF model.  To learn more, I investigated both of
 these technologies.
 
+.. _Neo4j: https://neo4j.com/
+.. _Amazon Web Services (Amazon Neptune): https://aws.amazon.com/neptune/
 .. _market research report conducted by Forrester Research: https://neo4j.com/whitepapers/forrester-wave-graph-data-platforms/
 .. image:: /images/graphdb_market.png
+  :align: center
 
 Amazon Neptune
 --------------
