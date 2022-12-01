@@ -2,13 +2,16 @@
 Bundled References Documentation
 ================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+Bundled References Documentation serves as the wiki and documentation
+for an independent research study being conducted by Alexander Carr under Professor
+Ahmed Hassan at Lehigh University.  This site holds both information about the
+Bundled References code base as well as accompanying background information
+that helped advance or contribute to the project.
 
-Check out the :doc:`bundledrefs/usage` section for further information, including
-how to :ref:`installation` the project.
+The goal of this independent research study is to take the Bundled References
+linked data structure and adapt it to be used in a graph database.  Range queries
+across nodes within a graph database are common in graph query workloads, which
+creates an opportunity to increase graph database performance with Bundled References.
 
 .. note::
 
