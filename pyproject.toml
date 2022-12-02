@@ -1,8 +1,8 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+# [build-system]
+# requires = ["flit_core >=3.2,<4"]
+# build-backend = "flit_core.buildapi"
 
-[project]
-name = "lumache"
-authors = [{name = "Graziella", email = "graziella@lumache"}]
-dynamic = ["version", "description"]
+# [project]
+# name = "Bundled References"
+# authors = [{name = "Alexander Carr", email = "jalexandercarr@gmail.com"}]
+# dynamic = ["version", "description"]

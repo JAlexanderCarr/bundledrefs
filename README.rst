@@ -1,6 +1,8 @@
 Bundled References
 ==================
 
+Make sure to clone this repository with ``git clone --recurse-submodules https://github.com/JAlexanderCarr/bundledrefs.git``
+
 Bundled References is a project for an independent research study
 being conducted by Alexander Carr under Professor Ahmed Hassan
 at Lehigh University.  The goal of this independent research study is to take the Bundled References

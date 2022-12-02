@@ -1,0 +1,3 @@
+[submodule "bundledrefs"]
+	path = bundledrefs
+	url = https://github.com/jacnel/bundledrefs
